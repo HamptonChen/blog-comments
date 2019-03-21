@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-20T08:28:34.572Z</updated>
+  <updated>2019-03-21T14:33:43.661Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,40 +17,28 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2019-03-19-hexo</title>
-    <link href="http://yoursite.com/2019/03/19/2019-03-19-hexo/"/>
-    <id>http://yoursite.com/2019/03/19/2019-03-19-hexo/</id>
-    <published>2019-03-19T15:36:57.000Z</published>
-    <updated>2019-03-20T08:28:34.572Z</updated>
+    <title>K-近邻(KNN)算法</title>
+    <link href="http://yoursite.com/2019/03/21/knn/"/>
+    <id>http://yoursite.com/2019/03/21/knn/</id>
+    <published>2019-03-21T09:04:17.000Z</published>
+    <updated>2019-03-21T14:33:43.661Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br><a id="more"></a></p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2019/03/19/hello-world/"/>
-    <id>http://yoursite.com/2019/03/19/hello-world/</id>
-    <published>2019-03-19T14:10:32.927Z</published>
-    <updated>2019-03-20T08:24:28.789Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>K-近邻（KNN，K-Nearest Neighbor）算法是一种基本分类与回归方法，在机器学习分类算法中占有相当大的地位，既是最简单的机器学习算法之一，也是基于实例的学习方法中最基本的，又是最好的文本分类算法之一。<br><a id="more"></a><br>我们本篇文章只讨论分类问题的KNN算法。</p><h2 id="KNN算法概述"><a href="#KNN算法概述" class="headerlink" title="KNN算法概述"></a>KNN算法概述</h2><p>KNN是通过测量不同特征值之间的距离进行分类。</p><p>KNN算法思路：如果一个样本在特征空间中的k各最相似（即特征空间中最近邻）的样本中的大多数属于某一个类别，则该样本也属于该类别。其中k一个是不大于20的整数。KNN算法中，所选择的邻居都是已经正确分类的对象。</p><p>KNN算法的输入为实例的特征向量，对应于特征空间的点；输出为实例的类别，可以取多类。</p><p>KNN算法实际上利用训练数据集对特征向量空间进行划分，并作为其分类的模型。k值的选择、距离度量和分类决策规则是KNN算法的三个基本要素。</p><h2 id="KNN算法工作原理"><a href="#KNN算法工作原理" class="headerlink" title="KNN算法工作原理"></a>KNN算法工作原理</h2><p>KNN算法工作原理可描述为：<br>1、假设有一个带有标签的训练样本集，其中包含每条数据与所属分类的对应关系。</p><p>2、输入没有带标签的新数据后，计算新数据与训练样本集中每条数据的距离。</p><p>3、对求得的所有距离进行升序排序。</p><p>4、选取k个与新数据距离最小的训练数据。</p><p>5、确定k个训练数据所在类别出现的频率。</p><p>6、返回k个训练数据中出现频率最高的类别作为新数据的分类。</p><h3 id="KNN算法距离计算方式"><a href="#KNN算法距离计算方式" class="headerlink" title="KNN算法距离计算方式"></a>KNN算法距离计算方式</h3><p>在KNN中，通过计算对象间距离来作为各个对象之间的相似性指标，这里的距离计算一般采用欧式距离或者是曼哈顿距离，两种距离的计算公式如下图所示：<br><img src="/images/20190321knn-1.png#pic_center" alt="Alt"></p><h3 id="KNN算法特点："><a href="#KNN算法特点：" class="headerlink" title="KNN算法特点："></a>KNN算法特点：</h3><ul><li><p>优点：精度高、对异常值不敏感、无数据输入假定</p></li><li><p>缺点：计算复杂度高、空间复杂度高</p></li><li><p>适用数据范围：数值型和标称型</p></li></ul><h2 id="KNN算法demo实例"><a href="#KNN算法demo实例" class="headerlink" title="KNN算法demo实例"></a>KNN算法demo实例</h2><p>python（python3.6）实现一个KNN算法的简单demo</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">import numpy as np</span><br><span class="line">from collections import Counter</span><br><span class="line">import os</span><br><span class="line"> </span><br><span class="line"># 创建样本数据集</span><br><span class="line">def createDataSet():</span><br><span class="line">    group = np.array([[1.0, 1.1], [1.0, 1.0], [0, 0.1], [0.1, 0]])</span><br><span class="line">    labels = [&apos;A&apos;, &apos;A&apos;, &apos;B&apos;, &apos;B&apos;]</span><br><span class="line">    return group, labels</span><br><span class="line"> </span><br><span class="line"># 近邻算法</span><br><span class="line">def classify0 (inX, dataSet, labels, k):</span><br><span class="line">    diffMat = np.tile(inX,(dataSet.shape[0],1)) - dataSet #待分类的输入向量与每个训练数据做差</span><br><span class="line">    distance = ((diffMat ** 2).sum(axis=1)) ** 0.5 #欧氏距离</span><br><span class="line">    sortDistanceIndices = distance.argsort() #从小到大的顺序，返回对应索引值</span><br><span class="line">    votelabel = []</span><br><span class="line">    for i in range(k):</span><br><span class="line">        votelabel.append(labels[sortDistanceIndices[i]])</span><br><span class="line">    Xlabel = Counter(votelabel).most_common(1)</span><br><span class="line">    return Xlabel[0][0]</span><br><span class="line"> </span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    # # 创建数据集和 k-近邻算法</span><br><span class="line">    group, labels = createDataSet()</span><br><span class="line">    # 新数据为[0, 0], k=3</span><br><span class="line">    label = classify0([0, 0], group, labels, 3)</span><br><span class="line">    print(label)</span><br></pre></td></tr></table></figure><p>执行上面代码，在控制台打印输出  B，即为数据[0, 0]的分类。</p><h3 id="方法说明"><a href="#方法说明" class="headerlink" title="方法说明"></a>方法说明</h3><p>上面python代码中有几个方法在这里简单说明一下：</p><ul><li><p>Counter(votelabel).most_common(1)：求votelabel中出现次数最多的元素</p></li><li><p>np.tile(A,B)：若B为int型：在列方向上将A重复B次 若B为元组(m,n):将A在列方向上重复n次，在行方向上重复m次</p></li><li><p>sum(axis=1)：函数的axis参数，axis=0:按列相加；axis=1:按行的方向相加，即每行数据求和</p></li><li><p>argsort：将数组的值按从小到大排序后，输出索引值</p></li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+      &lt;p&gt;K-近邻（KNN，K-Nearest Neighbor）算法是一种基本分类与回归方法，在机器学习分类算法中占有相当大的地位，既是最简单的机器学习算法之一，也是基于实例的学习方法中最基本的，又是最好的文本分类算法之一。&lt;br&gt;
     
     </summary>
     
+      <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="KNN" scheme="http://yoursite.com/tags/KNN/"/>
+    
+      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="分类算法" scheme="http://yoursite.com/tags/%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
