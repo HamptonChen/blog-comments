@@ -5,9 +5,9 @@
   <subtitle>Hampton Chen&#39;s Blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://hamptonchen.github.io/"/>
   <updated>2019-03-25T14:37:14.713Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://hamptonchen.github.io/</id>
   
   <author>
     <name>Hampton Chen</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>文本挖掘预处理之TF-IDF</title>
-    <link href="http://yoursite.com/2019/03/25/TF-IDF-1/"/>
-    <id>http://yoursite.com/2019/03/25/TF-IDF-1/</id>
+    <link href="https://hamptonchen.github.io/2019/03/25/TF-IDF-1/"/>
+    <id>https://hamptonchen.github.io/2019/03/25/TF-IDF-1/</id>
     <published>2019-03-25T14:10:10.000Z</published>
     <updated>2019-03-25T14:37:14.713Z</updated>
     
@@ -31,17 +31,17 @@
     
     </summary>
     
-      <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://hamptonchen.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="TF-IDF" scheme="http://yoursite.com/tags/TF-IDF/"/>
+      <category term="TF-IDF" scheme="https://hamptonchen.github.io/tags/TF-IDF/"/>
     
   </entry>
   
   <entry>
     <title>K-近邻(KNN)算法</title>
-    <link href="http://yoursite.com/2019/03/21/knn/"/>
-    <id>http://yoursite.com/2019/03/21/knn/</id>
+    <link href="https://hamptonchen.github.io/2019/03/21/knn/"/>
+    <id>https://hamptonchen.github.io/2019/03/21/knn/</id>
     <published>2019-03-21T09:04:17.000Z</published>
     <updated>2019-03-25T14:30:10.875Z</updated>
     
@@ -53,14 +53,14 @@
     
     </summary>
     
-      <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://hamptonchen.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="KNN" scheme="http://yoursite.com/tags/KNN/"/>
+      <category term="KNN" scheme="https://hamptonchen.github.io/tags/KNN/"/>
     
-      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://hamptonchen.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="分类算法" scheme="http://yoursite.com/tags/%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95/"/>
+      <category term="分类算法" scheme="https://hamptonchen.github.io/tags/%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
