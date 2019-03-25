@@ -17,23 +17,27 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>K-近邻(KNN)算法 | 程序员的修行之路</title>
-  <meta name="description" content="K-近邻（KNN，K-Nearest Neighbor）算法是一种基本分类与回归方法，在机器学习分类算法中占有相当大的地位，既是最简单的机器学习算法之一，也是基于实例的学习方法中最基本的，又是最好的文本分类算法之一。">
-<meta name="keywords" content="KNN,机器学习,分类算法">
+  <title>文本挖掘预处理之TF-IDF | 程序员的修行之路</title>
+  <meta name="description" content="TF-IDF（Term Frequency-Inverse Document Frequency）即“词频-反文档频率”，主要由TF和IDF两部分组成。TF-IDF是一种用于资讯检索与资讯探勘的常用加权技术，是一种统计方法，用于评估一个词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要程度与它在文件中出现的次数成正比，但同时与它在语料库中出现的频率成反比。">
+<meta name="keywords" content="TF-IDF">
 <meta property="og:type" content="article">
-<meta property="og:title" content="K-近邻(KNN)算法">
-<meta property="og:url" content="http://yoursite.com/2019/03/21/knn/index.html">
+<meta property="og:title" content="文本挖掘预处理之TF-IDF">
+<meta property="og:url" content="http://yoursite.com/2019/03/25/TF-IDF-1/index.html">
 <meta property="og:site_name" content="程序员的修行之路">
-<meta property="og:description" content="K-近邻（KNN，K-Nearest Neighbor）算法是一种基本分类与回归方法，在机器学习分类算法中占有相当大的地位，既是最简单的机器学习算法之一，也是基于实例的学习方法中最基本的，又是最好的文本分类算法之一。">
+<meta property="og:description" content="TF-IDF（Term Frequency-Inverse Document Frequency）即“词频-反文档频率”，主要由TF和IDF两部分组成。TF-IDF是一种用于资讯检索与资讯探勘的常用加权技术，是一种统计方法，用于评估一个词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要程度与它在文件中出现的次数成正比，但同时与它在语料库中出现的频率成反比。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/images/articles/2019/20190321knn-1.png#pic_center">
-<meta property="og:updated_time" content="2019-03-25T14:30:10.875Z">
+<meta property="og:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-1.png#pic_center">
+<meta property="og:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-2.png#pic_center">
+<meta property="og:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-3.png#pic_center">
+<meta property="og:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-4.png#pic_center">
+<meta property="og:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-5.png#pic_center">
+<meta property="og:updated_time" content="2019-03-25T14:37:14.713Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="K-近邻(KNN)算法">
-<meta name="twitter:description" content="K-近邻（KNN，K-Nearest Neighbor）算法是一种基本分类与回归方法，在机器学习分类算法中占有相当大的地位，既是最简单的机器学习算法之一，也是基于实例的学习方法中最基本的，又是最好的文本分类算法之一。">
-<meta name="twitter:image" content="http://yoursite.com/images/articles/2019/20190321knn-1.png#pic_center">
+<meta name="twitter:title" content="文本挖掘预处理之TF-IDF">
+<meta name="twitter:description" content="TF-IDF（Term Frequency-Inverse Document Frequency）即“词频-反文档频率”，主要由TF和IDF两部分组成。TF-IDF是一种用于资讯检索与资讯探勘的常用加权技术，是一种统计方法，用于评估一个词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要程度与它在文件中出现的次数成正比，但同时与它在语料库中出现的频率成反比。">
+<meta name="twitter:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-1.png#pic_center">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://yoursite.com/2019/03/21/knn/index.html">
+  <link rel="canonical" href="http://yoursite.com/2019/03/25/TF-IDF-1/index.html">
   
   
     <link rel="icon" href="/favicon.png" type="image/x-icon">
@@ -276,14 +280,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-knn" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-TF-IDF-1" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      K-近邻(KNN)算法
+      文本挖掘预处理之TF-IDF
     </h1>
   
 
@@ -291,8 +295,8 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2019/03/21/knn/" class="article-date">
-	  <time datetime="2019-03-21T09:04:17.000Z" itemprop="datePublished">2019-03-21</time>
+	<a href="/2019/03/25/TF-IDF-1/" class="article-date">
+	  <time datetime="2019-03-25T14:10:10.000Z" itemprop="datePublished">2019-03-25</time>
 	</a>
 </span>
         
@@ -304,7 +308,7 @@
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/KNN/">KNN</a>, <a class="article-tag-link" href="/tags/分类算法/">分类算法</a>, <a class="article-tag-link" href="/tags/机器学习/">机器学习</a>
+	<a class="article-tag-link" href="/tags/TF-IDF/">TF-IDF</a>
   </span>
 
 
@@ -317,10 +321,10 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/03/21/knn/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/03/25/TF-IDF-1/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 933(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 700(字)</span>
 	
 	
 
@@ -328,38 +332,32 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>K-近邻（KNN，K-Nearest Neighbor）算法是一种基本分类与回归方法，在机器学习分类算法中占有相当大的地位，既是最简单的机器学习算法之一，也是基于实例的学习方法中最基本的，又是最好的文本分类算法之一。<br><a id="more"></a><br>我们本篇文章只讨论分类问题的KNN算法。</p>
-<h2 id="KNN算法概述"><a href="#KNN算法概述" class="headerlink" title="KNN算法概述"></a>KNN算法概述</h2><p>KNN是通过测量不同特征值之间的距离进行分类。</p>
-<p>KNN算法思路：如果一个样本在特征空间中的k各最相似（即特征空间中最近邻）的样本中的大多数属于某一个类别，则该样本也属于该类别。其中k一个是不大于20的整数。KNN算法中，所选择的邻居都是已经正确分类的对象。</p>
-<p>KNN算法的输入为实例的特征向量，对应于特征空间的点；输出为实例的类别，可以取多类。</p>
-<p>KNN算法实际上利用训练数据集对特征向量空间进行划分，并作为其分类的模型。k值的选择、距离度量和分类决策规则是KNN算法的三个基本要素。</p>
-<h2 id="KNN算法工作原理"><a href="#KNN算法工作原理" class="headerlink" title="KNN算法工作原理"></a>KNN算法工作原理</h2><p>KNN算法工作原理可描述为：<br>1、假设有一个带有标签的训练样本集，其中包含每条数据与所属分类的对应关系。</p>
-<p>2、输入没有带标签的新数据后，计算新数据与训练样本集中每条数据的距离。</p>
-<p>3、对求得的所有距离进行升序排序。</p>
-<p>4、选取k个与新数据距离最小的训练数据。</p>
-<p>5、确定k个训练数据所在类别出现的频率。</p>
-<p>6、返回k个训练数据中出现频率最高的类别作为新数据的分类。</p>
-<h3 id="KNN算法距离计算方式"><a href="#KNN算法距离计算方式" class="headerlink" title="KNN算法距离计算方式"></a>KNN算法距离计算方式</h3><p>在KNN中，通过计算对象间距离来作为各个对象之间的相似性指标，这里的距离计算一般采用欧式距离或者是曼哈顿距离，两种距离的计算公式如下图所示：<br><img src="/images/articles/2019/20190321knn-1.png#pic_center" alt="Alt"></p>
-<h3 id="KNN算法特点："><a href="#KNN算法特点：" class="headerlink" title="KNN算法特点："></a>KNN算法特点：</h3><ul>
-<li><p>优点：精度高、对异常值不敏感、无数据输入假定</p>
-</li>
-<li><p>缺点：计算复杂度高、空间复杂度高</p>
-</li>
-<li><p>适用数据范围：数值型和标称型</p>
-</li>
-</ul>
-<h2 id="KNN算法demo实例"><a href="#KNN算法demo实例" class="headerlink" title="KNN算法demo实例"></a>KNN算法demo实例</h2><p>python（python3.6）实现一个KNN算法的简单demo</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 创建样本数据集</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">createDataSet</span><span class="params">()</span>:</span></span><br><span class="line">    group = np.array([[<span class="number">1.0</span>, <span class="number">1.1</span>], [<span class="number">1.0</span>, <span class="number">1.0</span>], [<span class="number">0</span>, <span class="number">0.1</span>], [<span class="number">0.1</span>, <span class="number">0</span>]])</span><br><span class="line">    labels = [<span class="string">'A'</span>, <span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'B'</span>]</span><br><span class="line">    <span class="keyword">return</span> group, labels</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 近邻算法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">classify0</span> <span class="params">(inX, dataSet, labels, k)</span>:</span></span><br><span class="line">    diffMat = np.tile(inX,(dataSet.shape[<span class="number">0</span>],<span class="number">1</span>)) - dataSet <span class="comment">#待分类的输入向量与每个训练数据做差</span></span><br><span class="line">    distance = ((diffMat ** <span class="number">2</span>).sum(axis=<span class="number">1</span>)) ** <span class="number">0.5</span> <span class="comment">#欧氏距离</span></span><br><span class="line">    sortDistanceIndices = distance.argsort() <span class="comment">#从小到大的顺序，返回对应索引值</span></span><br><span class="line">    votelabel = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(k):</span><br><span class="line">        votelabel.append(labels[sortDistanceIndices[i]])</span><br><span class="line">    Xlabel = Counter(votelabel).most_common(<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> Xlabel[<span class="number">0</span>][<span class="number">0</span>]</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="comment"># # 创建数据集和 k-近邻算法</span></span><br><span class="line">    group, labels = createDataSet()</span><br><span class="line">    <span class="comment"># 新数据为[0, 0], k=3</span></span><br><span class="line">    label = classify0([<span class="number">0</span>, <span class="number">0</span>], group, labels, <span class="number">3</span>)</span><br><span class="line">    print(label)</span><br></pre></td></tr></table></figure>
-<p>执行上面代码，在控制台打印输出  B，即为数据[0, 0]的分类。</p>
-<h3 id="方法说明"><a href="#方法说明" class="headerlink" title="方法说明"></a>方法说明</h3><p>上面python代码中有几个方法在这里简单说明一下：</p>
+        <p>TF-IDF（Term Frequency-Inverse Document Frequency）即“词频-反文档频率”，主要由TF和IDF两部分组成。TF-IDF是一种用于资讯检索与资讯探勘的常用加权技术，是一种统计方法，用于评估一个词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要程度与它在文件中出现的次数成正比，但同时与它在语料库中出现的频率成反比。<br><a id="more"></a></p>
+<p><strong>TF——词频：</strong>一个词在文章中出现的次数。</p>
+<p>在计算词频时，需要注意停用词的过滤。什么是停用词：在文章中出现次数最多的“的”、“是”、“在”等最常用词，但对结果毫无帮助，必须过滤的词。</p>
+<p>TF计算有两种方式，具体公式如下：</p>
+<div align="center"><br><img src="/images/articles/2019/20190325TF-IDF-1.png#pic_center" alt="Alt"><br><img src="/images/articles/2019/20190325TF-IDF-2.png#pic_center" alt="Alt"><br></div>
+
+<p><strong>IDF——反文档频率：</strong>一个词在所有文章中出现的频率。如果包含这个词的文章越少，IDF越大，则说明词具有很好的类别区分能力。计算公式如下：</p>
+<div align="center"><br><img src="/images/articles/2019/20190325TF-IDF-3.png#pic_center" alt="Alt"><br></div>
+
+<p>将TF和IDF相乘，就得到一个词的TF-IDF值，某个词对文章的重要性越高，该值越大，于是排在前面的几个词，就是这篇文章的关键词。</p>
+<div align="center"><br><img src="/images/articles/2019/20190325TF-IDF-4.png#pic_center" alt="Alt"><br></div>
+
+<h2 id="TF-IDF总结："><a href="#TF-IDF总结：" class="headerlink" title="TF-IDF总结："></a>TF-IDF总结：</h2><p><strong>优点：</strong>简单快速，结果比较符合实际情况。</p>
+<p><strong>缺点：</strong>单纯以“词频”做衡量标准，不够全面，有时重要的词可能出现的次数不多。</p>
+<h2 id="用python实现TF-IDF的计算"><a href="#用python实现TF-IDF的计算" class="headerlink" title="用python实现TF-IDF的计算"></a>用python实现TF-IDF的计算</h2><p>将下图所示的已经分好词的文章作为语料库，计算101it.seg.cln.txt中的TF-IDF。</p>
+<div align="center"><br><img src="/images/articles/2019/20190325TF-IDF-5.png#pic_center" alt="Alt"><br></div>
+
+<p>具体python代码实现如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 要计算TF-IDF的文章路径</span></span><br><span class="line">file_path = <span class="string">'./data/101it.seg.cln.txt'</span></span><br><span class="line"><span class="comment"># 语料库目录路径</span></span><br><span class="line">data_dir_path = <span class="string">'./data'</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 获取文章内容</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">read_content</span><span class="params">(file)</span>:</span></span><br><span class="line">    content = open(file, <span class="string">'r'</span>, encoding=<span class="string">'UTF-8'</span>)</span><br><span class="line">    <span class="keyword">return</span> content</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 计算IDF</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_idf</span><span class="params">(dir_path)</span>:</span></span><br><span class="line">    all_word_set = set()</span><br><span class="line">    article_list = []</span><br><span class="line">    article_count = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> fd <span class="keyword">in</span> os.listdir(dir_path):</span><br><span class="line">        article_count += <span class="number">1</span></span><br><span class="line">        file = dir_path + <span class="string">'/'</span> + fd</span><br><span class="line">        content = read_content(file)</span><br><span class="line">        content_set = set()</span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> content:</span><br><span class="line">            word_tmp = line.strip().split(<span class="string">' '</span>)</span><br><span class="line">            <span class="keyword">for</span> word <span class="keyword">in</span> word_tmp:</span><br><span class="line">                word = word.strip()</span><br><span class="line">                all_word_set.add(word)</span><br><span class="line">                content_set.add(word)</span><br><span class="line">        article_list.append(content_set)</span><br><span class="line"> </span><br><span class="line">    idf_dict = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> all_word_set:</span><br><span class="line">        count = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> article <span class="keyword">in</span> article_list:</span><br><span class="line">            <span class="keyword">if</span> word <span class="keyword">in</span> article:</span><br><span class="line">                count += <span class="number">1</span></span><br><span class="line">        idf_dict[word] = math.log(float(article_count)/(float(count) + <span class="number">1.0</span>))</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> idf_dict</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 计算TF</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_tf</span><span class="params">(file)</span>:</span></span><br><span class="line">    content = read_content(file)</span><br><span class="line">    word_set = set()</span><br><span class="line">    word_dict = &#123;&#125;</span><br><span class="line">    word_count = <span class="number">0</span></span><br><span class="line">    <span class="comment"># 计算词频和文章总词数</span></span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> content:</span><br><span class="line">        word_tmp = line.strip().split(<span class="string">' '</span>)</span><br><span class="line">        <span class="keyword">for</span> word <span class="keyword">in</span> word_tmp:</span><br><span class="line">            word = word.strip()</span><br><span class="line">            <span class="keyword">if</span> word <span class="keyword">not</span> <span class="keyword">in</span> word_dict:</span><br><span class="line">                word_dict[word] = <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                word_dict[word] += <span class="number">1</span></span><br><span class="line">            word_count += <span class="number">1</span></span><br><span class="line">            word_set.add(word)</span><br><span class="line">    <span class="comment"># 计算TF</span></span><br><span class="line">    <span class="keyword">for</span> tmp <span class="keyword">in</span> word_set:</span><br><span class="line">        word_dict[tmp] = float(word_dict[tmp])/float(word_count)</span><br><span class="line">    <span class="keyword">return</span> word_dict</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    idf_dict = calculate_idf(data_dir_path)</span><br><span class="line">    tf_dict = calculate_tf(file_path)</span><br><span class="line">    tfidf_dict = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> tf_dict:</span><br><span class="line">        tfidf_dict[key] = tf_dict[key] * idf_dict[key]</span><br><span class="line">    print(tfidf_dict)</span><br></pre></td></tr></table></figure>
+<h2 id="TF-IDF应用："><a href="#TF-IDF应用：" class="headerlink" title="TF-IDF应用："></a>TF-IDF应用：</h2><p>TF-IDF有下面几个应用，具体的实现后续文章再给大家介绍：</p>
 <ul>
-<li><p>Counter(votelabel).most_common(1)：求votelabel中出现次数最多的元素</p>
+<li><p>提取文章的关键词</p>
 </li>
-<li><p>np.tile(A,B)：若B为int型：在列方向上将A重复B次 若B为元组(m,n):将A在列方向上重复n次，在行方向上重复m次</p>
+<li><p>TF-IDF结合余弦相似度找相似文章</p>
 </li>
-<li><p>sum(axis=1)：函数的axis参数，axis=0:按列相加；axis=1:按行的方向相加，即每行数据求和</p>
-</li>
-<li><p>argsort：将数组的值按从小到大排序后，输出索引值</p>
+<li><p>给文章自动生成摘要</p>
 </li>
 </ul>
 
@@ -371,7 +369,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://yoursite.com/2019/03/21/knn/" title="K-近邻(KNN)算法" target="_blank" rel="external">http://yoursite.com/2019/03/21/knn/</a>
+      <a href="http://yoursite.com/2019/03/25/TF-IDF-1/" title="文本挖掘预处理之TF-IDF" target="_blank" rel="external">http://yoursite.com/2019/03/25/TF-IDF-1/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -417,10 +415,10 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2019/03/25/TF-IDF-1/" title="文本挖掘预处理之TF-IDF"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
     
+    <li class="next">
+      <a href="/2019/03/21/knn/" title="K-近邻(KNN)算法"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
     
     
   </ul>
