@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hamptonchen.github.io/2019/03/25/TF-IDF-1/</loc>
+    <loc>http://yoursite.com/2019/04/09/%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D/</loc>
+    <lastmod>2019-04-09</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/03/25/TF-IDF-1/</loc>
     <lastmod>2019-03-25</lastmod>
   </url>  <url>
-    <loc>https://hamptonchen.github.io/2019/03/21/knn/</loc>
+    <loc>http://yoursite.com/2019/03/21/knn/</loc>
     <lastmod>2019-03-25</lastmod>
   </url>
 </urlset>
