@@ -17,27 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>文本挖掘预处理之TF-IDF | 程序员的修行之路</title>
-  <meta name="description" content="TF-IDF（Term Frequency-Inverse Document Frequency）即“词频-反文档频率”，主要由TF和IDF两部分组成。TF-IDF是一种用于资讯检索与资讯探勘的常用加权技术，是一种统计方法，用于评估一个词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要程度与它在文件中出现的次数成正比，但同时与它在语料库中出现的频率成反比。">
-<meta name="keywords" content="TF-IDF">
+  <title>推荐系统介绍 | 程序员的修行之路</title>
+  <meta name="description" content="一、背景随着互联网的快速发展，我们进入一个信息爆炸的时代。互联网的发展，为我们提供了越来越多的服务平台，比如购物平台、视频播放网站、音乐播放器、社交网婚恋网等等，提供的物品种类也越来越多样。如何更好地满足客户的需求，成了企业的难题。 在这个信息爆炸的时代，无论是消费者还是信息生产者都遇到了很大的挑战：作为消费者，如何从大量信息中找到自己感兴趣的信息是一件非常困难的事情；作为信息生产者，如何让自己生">
+<meta name="keywords" content="推荐系统,大数据">
 <meta property="og:type" content="article">
-<meta property="og:title" content="文本挖掘预处理之TF-IDF">
-<meta property="og:url" content="http://yoursite.com/2019/03/25/TF-IDF-1/index.html">
+<meta property="og:title" content="推荐系统介绍">
+<meta property="og:url" content="http://yoursite.com/2019/04/16/推荐系统介绍/index.html">
 <meta property="og:site_name" content="程序员的修行之路">
-<meta property="og:description" content="TF-IDF（Term Frequency-Inverse Document Frequency）即“词频-反文档频率”，主要由TF和IDF两部分组成。TF-IDF是一种用于资讯检索与资讯探勘的常用加权技术，是一种统计方法，用于评估一个词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要程度与它在文件中出现的次数成正比，但同时与它在语料库中出现的频率成反比。">
+<meta property="og:description" content="一、背景随着互联网的快速发展，我们进入一个信息爆炸的时代。互联网的发展，为我们提供了越来越多的服务平台，比如购物平台、视频播放网站、音乐播放器、社交网婚恋网等等，提供的物品种类也越来越多样。如何更好地满足客户的需求，成了企业的难题。 在这个信息爆炸的时代，无论是消费者还是信息生产者都遇到了很大的挑战：作为消费者，如何从大量信息中找到自己感兴趣的信息是一件非常困难的事情；作为信息生产者，如何让自己生">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-1.png#pic_center">
-<meta property="og:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-2.png#pic_center">
-<meta property="og:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-3.png#pic_center">
-<meta property="og:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-4.png#pic_center">
-<meta property="og:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-5.png#pic_center">
-<meta property="og:updated_time" content="2019-03-25T14:37:14.713Z">
+<meta property="og:updated_time" content="2019-04-15T16:31:14.558Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文本挖掘预处理之TF-IDF">
-<meta name="twitter:description" content="TF-IDF（Term Frequency-Inverse Document Frequency）即“词频-反文档频率”，主要由TF和IDF两部分组成。TF-IDF是一种用于资讯检索与资讯探勘的常用加权技术，是一种统计方法，用于评估一个词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要程度与它在文件中出现的次数成正比，但同时与它在语料库中出现的频率成反比。">
-<meta name="twitter:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-1.png#pic_center">
+<meta name="twitter:title" content="推荐系统介绍">
+<meta name="twitter:description" content="一、背景随着互联网的快速发展，我们进入一个信息爆炸的时代。互联网的发展，为我们提供了越来越多的服务平台，比如购物平台、视频播放网站、音乐播放器、社交网婚恋网等等，提供的物品种类也越来越多样。如何更好地满足客户的需求，成了企业的难题。 在这个信息爆炸的时代，无论是消费者还是信息生产者都遇到了很大的挑战：作为消费者，如何从大量信息中找到自己感兴趣的信息是一件非常困难的事情；作为信息生产者，如何让自己生">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://yoursite.com/2019/03/25/TF-IDF-1/index.html">
+  <link rel="canonical" href="http://yoursite.com/2019/04/16/推荐系统介绍/index.html">
   
   
     <link rel="icon" href="/images/site_logo.jpg" type="image/x-icon">
@@ -330,14 +324,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-TF-IDF-1" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-推荐系统介绍" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      文本挖掘预处理之TF-IDF
+      推荐系统介绍
     </h1>
   
 
@@ -345,20 +339,20 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2019/03/25/TF-IDF-1/" class="article-date">
-	  <time datetime="2019-03-25T14:10:10.000Z" itemprop="datePublished">2019-03-25</time>
+	<a href="/2019/04/16/推荐系统介绍/" class="article-date">
+	  <time datetime="2019-04-15T16:29:20.000Z" itemprop="datePublished">2019-04-16</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
+    <a class="article-category-link" href="/categories/大数据/">大数据</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/TF-IDF/">TF-IDF</a>
+	<a class="article-tag-link" href="/tags/大数据/">大数据</a>, <a class="article-tag-link" href="/tags/推荐系统/">推荐系统</a>
   </span>
 
 
@@ -371,10 +365,10 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/03/25/TF-IDF-1/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/04/16/推荐系统介绍/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 700(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.3k(字)</span>
 	
 	
 
@@ -382,34 +376,31 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>TF-IDF（Term Frequency-Inverse Document Frequency）即“词频-反文档频率”，主要由TF和IDF两部分组成。TF-IDF是一种用于资讯检索与资讯探勘的常用加权技术，是一种统计方法，用于评估一个词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要程度与它在文件中出现的次数成正比，但同时与它在语料库中出现的频率成反比。<br><a id="more"></a></p>
-<p><strong>TF——词频：</strong>一个词在文章中出现的次数。</p>
-<p>在计算词频时，需要注意停用词的过滤。什么是停用词：在文章中出现次数最多的“的”、“是”、“在”等最常用词，但对结果毫无帮助，必须过滤的词。</p>
-<p>TF计算有两种方式，具体公式如下：</p>
-<div align="center"><br><img src="/images/articles/2019/20190325TF-IDF-1.png#pic_center" alt="Alt"><br><img src="/images/articles/2019/20190325TF-IDF-2.png#pic_center" alt="Alt"><br></div>
-
-<p><strong>IDF——反文档频率：</strong>一个词在所有文章中出现的频率。如果包含这个词的文章越少，IDF越大，则说明词具有很好的类别区分能力。计算公式如下：</p>
-<div align="center"><br><img src="/images/articles/2019/20190325TF-IDF-3.png#pic_center" alt="Alt"><br></div>
-
-<p>将TF和IDF相乘，就得到一个词的TF-IDF值，某个词对文章的重要性越高，该值越大，于是排在前面的几个词，就是这篇文章的关键词。</p>
-<div align="center"><br><img src="/images/articles/2019/20190325TF-IDF-4.png#pic_center" alt="Alt"><br></div>
-
-<h2 id="TF-IDF总结："><a href="#TF-IDF总结：" class="headerlink" title="TF-IDF总结："></a>TF-IDF总结：</h2><p><strong>优点：</strong>简单快速，结果比较符合实际情况。</p>
-<p><strong>缺点：</strong>单纯以“词频”做衡量标准，不够全面，有时重要的词可能出现的次数不多。</p>
-<h2 id="用python实现TF-IDF的计算"><a href="#用python实现TF-IDF的计算" class="headerlink" title="用python实现TF-IDF的计算"></a>用python实现TF-IDF的计算</h2><p>将下图所示的已经分好词的文章作为语料库，计算101it.seg.cln.txt中的TF-IDF。</p>
-<div align="center"><br><img src="/images/articles/2019/20190325TF-IDF-5.png#pic_center" alt="Alt"><br></div>
-
-<p>具体python代码实现如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 要计算TF-IDF的文章路径</span></span><br><span class="line">file_path = <span class="string">'./data/101it.seg.cln.txt'</span></span><br><span class="line"><span class="comment"># 语料库目录路径</span></span><br><span class="line">data_dir_path = <span class="string">'./data'</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 获取文章内容</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">read_content</span><span class="params">(file)</span>:</span></span><br><span class="line">    content = open(file, <span class="string">'r'</span>, encoding=<span class="string">'UTF-8'</span>)</span><br><span class="line">    <span class="keyword">return</span> content</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 计算IDF</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_idf</span><span class="params">(dir_path)</span>:</span></span><br><span class="line">    all_word_set = set()</span><br><span class="line">    article_list = []</span><br><span class="line">    article_count = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> fd <span class="keyword">in</span> os.listdir(dir_path):</span><br><span class="line">        article_count += <span class="number">1</span></span><br><span class="line">        file = dir_path + <span class="string">'/'</span> + fd</span><br><span class="line">        content = read_content(file)</span><br><span class="line">        content_set = set()</span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> content:</span><br><span class="line">            word_tmp = line.strip().split(<span class="string">' '</span>)</span><br><span class="line">            <span class="keyword">for</span> word <span class="keyword">in</span> word_tmp:</span><br><span class="line">                word = word.strip()</span><br><span class="line">                all_word_set.add(word)</span><br><span class="line">                content_set.add(word)</span><br><span class="line">        article_list.append(content_set)</span><br><span class="line"> </span><br><span class="line">    idf_dict = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> word <span class="keyword">in</span> all_word_set:</span><br><span class="line">        count = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> article <span class="keyword">in</span> article_list:</span><br><span class="line">            <span class="keyword">if</span> word <span class="keyword">in</span> article:</span><br><span class="line">                count += <span class="number">1</span></span><br><span class="line">        idf_dict[word] = math.log(float(article_count)/(float(count) + <span class="number">1.0</span>))</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> idf_dict</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 计算TF</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_tf</span><span class="params">(file)</span>:</span></span><br><span class="line">    content = read_content(file)</span><br><span class="line">    word_set = set()</span><br><span class="line">    word_dict = &#123;&#125;</span><br><span class="line">    word_count = <span class="number">0</span></span><br><span class="line">    <span class="comment"># 计算词频和文章总词数</span></span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> content:</span><br><span class="line">        word_tmp = line.strip().split(<span class="string">' '</span>)</span><br><span class="line">        <span class="keyword">for</span> word <span class="keyword">in</span> word_tmp:</span><br><span class="line">            word = word.strip()</span><br><span class="line">            <span class="keyword">if</span> word <span class="keyword">not</span> <span class="keyword">in</span> word_dict:</span><br><span class="line">                word_dict[word] = <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                word_dict[word] += <span class="number">1</span></span><br><span class="line">            word_count += <span class="number">1</span></span><br><span class="line">            word_set.add(word)</span><br><span class="line">    <span class="comment"># 计算TF</span></span><br><span class="line">    <span class="keyword">for</span> tmp <span class="keyword">in</span> word_set:</span><br><span class="line">        word_dict[tmp] = float(word_dict[tmp])/float(word_count)</span><br><span class="line">    <span class="keyword">return</span> word_dict</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    idf_dict = calculate_idf(data_dir_path)</span><br><span class="line">    tf_dict = calculate_tf(file_path)</span><br><span class="line">    tfidf_dict = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> tf_dict:</span><br><span class="line">        tfidf_dict[key] = tf_dict[key] * idf_dict[key]</span><br><span class="line">    print(tfidf_dict)</span><br></pre></td></tr></table></figure>
-<h2 id="TF-IDF应用："><a href="#TF-IDF应用：" class="headerlink" title="TF-IDF应用："></a>TF-IDF应用：</h2><p>TF-IDF有下面几个应用，具体的实现后续文章再给大家介绍：</p>
+        <h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>随着互联网的快速发展，我们进入一个信息爆炸的时代。互联网的发展，为我们提供了越来越多的服务平台，比如购物平台、视频播放网站、音乐播放器、社交网婚恋网等等，提供的物品种类也越来越多样。如何更好地满足客户的需求，成了企业的难题。</p>
+<p>在这个信息爆炸的时代，无论是消费者还是信息生产者都遇到了很大的挑战：作为消费者，如何从大量信息中找到自己感兴趣的信息是一件非常困难的事情；作为信息生产者，如何让自己生产的信息脱颖而出，受到广大用户的关注，也是一件非常困难的事情。推荐系统就是解决这一矛盾的重要工具。<br><a id="more"></a></p>
+<h2 id="二、什么是推荐系统"><a href="#二、什么是推荐系统" class="headerlink" title="二、什么是推荐系统"></a>二、什么是推荐系统</h2><p>推荐系统是一项工程技术解决方案，通过利用机器学习等技术，在用户使用产品进行浏览交互的过程中，系统主动用户展示可能会喜欢的物品，从而促进物品的消费，节省用户时间，提升用户体验，做到资源的优化配置。</p>
+<p>要将推荐系统落地到业务上需要大量的工程开发：涉及到日志打点、日志收集、ETL、分布式计算、特征工程、推荐算法建模、数据存储、提供接口服务、UI展示和交互、推荐效果评估等。</p>
+<p>推荐系统的本质是在用户需求不明确的情况下，从海量的信息中为用户寻找其感兴趣的信息的技术手段。</p>
+<p>推荐系统的任务就是联系用户和信息(物品)，一方面帮助用户发现对自己有价值的信息，另一方面让信息能够展现在对它感兴趣的用户面前，从而实现信息消费者和信息生产者的双赢。</p>
+<p>推荐系统很好满足了用户、平台、内容提供商三方的需求。以淘宝为例：用户及在淘宝上购物的买家，平台即淘宝网站，网站上众多的店主就是内容提供方。通过推荐系统可以更好将商品曝光给要购买的用户，提升社会资源的配置效率。</p>
+<h2 id="三、推荐系统应用领域"><a href="#三、推荐系统应用领域" class="headerlink" title="三、推荐系统应用领域"></a>三、推荐系统应用领域</h2><p>推荐系统应用场景正在不断被挖掘和创造，只要存在大量供用户消费的产品，就有推荐系统发挥价值的地方。</p>
+<p>推荐系统主要应用的领域有如下几类：</p>
 <ul>
-<li><p>提取文章的关键词</p>
-</li>
-<li><p>TF-IDF结合余弦相似度找相似文章</p>
-</li>
-<li><p>给文章自动生成摘要</p>
-</li>
+<li>电子商务：淘宝、京东、苏宁易购、亚马逊等</li>
+<li>视频：腾讯视频、优酷、抖音等</li>
+<li>音乐：网易云音乐、QQ音乐等</li>
+<li>生活服务类：美团、携程</li>
+<li>资讯类：头条、一点资讯等</li>
+<li>社交类：陌陌、珍爱网等</li>
 </ul>
+<h2 id="四、常用推荐算法"><a href="#四、常用推荐算法" class="headerlink" title="四、常用推荐算法"></a>四、常用推荐算法</h2><p>接下来我们简单介绍一些推荐系统常用的算法：</p>
+<h4 id="1、基于内容的推荐"><a href="#1、基于内容的推荐" class="headerlink" title="1、基于内容的推荐"></a>1、基于内容的推荐</h4><p>前面我们提到过推荐系统通过技术将用户和物品关联起来，物品本身包含很多属性，用户通过与物品的交互产生行为日志，这些日志可以作为衡量用户对物品偏好的标签，通过这些标签为用户做推荐，这就是基于内容的推荐算法。以音乐播放器推荐歌曲为例，歌曲有歌名、演唱者、类型、年代等标签信息，假设某个用户经常听张杰的歌，或者用户收藏的歌单中大部分都是张杰的歌曲，那么我们可以根据这些兴趣特征为用户推荐张杰的歌。</p>
+<h4 id="2、基于协同过滤的推荐"><a href="#2、基于协同过滤的推荐" class="headerlink" title="2、基于协同过滤的推荐"></a>2、基于协同过滤的推荐</h4><p>用户与物品的交互留下了用户的标记，我们可以通过“物以类聚，人以群分”的思想为用户提供个性化推荐。</p>
+<p>“物以类聚”具体来说就是：如果有许多用户对两个物品有相似的偏好，说明这两个物品是“相似”的，通过推荐与用户喜欢过的物品相似的物品的方法为用户提供个性化推荐，这就是基于物品的协同过滤推荐算法。</p>
+<p>“人以群分”简单来说就是：找到与用户兴趣相同的人，将这些兴趣相同的用户浏览过的物品推荐给用户，这就是基于用户的协同过滤推荐算法。</p>
+<h2 id="五、推荐系统的价值"><a href="#五、推荐系统的价值" class="headerlink" title="五、推荐系统的价值"></a>五、推荐系统的价值</h2><p>接下来我们简单介绍一下推荐系统的价值：</p>
+<p>从<strong>用户</strong>角度来说，推荐系统可以让用户快速从海量信息中找到自己感兴趣的物品，节省了用户时间，提升用户的使用体验。<br>从<strong>平台</strong>角度来看：精准的推荐可以提升用户对平台的粘性，让用户喜欢上平台。平台整体营销收入提升，发现用户更多需求，满足其需求销售更多相关服务，获取更多利润。<br>从<strong>内容提供商</strong>角度来看，提升物品被卖出去的概率，提升提供商的销量。</p>
+<p>文章参考来源：<a href="https://mp.weixin.qq.com/s/DofYtvZCe-7RTicLqYtL4A" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/DofYtvZCe-7RTicLqYtL4A</a></p>
 
       
     </div>
@@ -419,7 +410,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://yoursite.com/2019/03/25/TF-IDF-1/" title="文本挖掘预处理之TF-IDF" target="_blank" rel="external">http://yoursite.com/2019/03/25/TF-IDF-1/</a>
+      <a href="http://yoursite.com/2019/04/16/推荐系统介绍/" title="推荐系统介绍" target="_blank" rel="external">http://yoursite.com/2019/04/16/推荐系统介绍/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -465,13 +456,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2019/04/09/中文分词/" title="中文分词"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2019/03/21/knn/" title="K-近邻(KNN)算法"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2019/04/09/中文分词/" title="中文分词"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
