@@ -20,23 +20,23 @@
   
   
   <title>文本挖掘预处理之TF-IDF | 程序员的修行之路</title>
-  <meta name="description" content="TF-IDF（Term Frequency-Inverse Document Frequency）即“词频-反文档频率”，主要由TF和IDF两部分组成。TF-IDF是一种用于资讯检索与资讯探勘的常用加权技术，是一种统计方法，用于评估一个词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要程度与它在文件中出现的次数成正比，但同时与它在语料库中出现的频率成反比。">
+  <meta name="description" content="TF-IDF（Term Frequency-Inverse Document Frequency）即“词频-反文档频率”，主要由TF和IDF两部分组成。TF-IDF是一种用于资讯检索与资讯探勘的常用加权技术，是一种统计方法，用于评估一个词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要程度与它在文件中出现的次数成正比，但同时与它在语料库中出现的频率成反比。 TF——词频：一个词在文">
 <meta name="keywords" content="TF-IDF">
 <meta property="og:type" content="article">
 <meta property="og:title" content="文本挖掘预处理之TF-IDF">
 <meta property="og:url" content="http://yoursite.com/2019/03/25/TF-IDF-1/index.html">
 <meta property="og:site_name" content="程序员的修行之路">
-<meta property="og:description" content="TF-IDF（Term Frequency-Inverse Document Frequency）即“词频-反文档频率”，主要由TF和IDF两部分组成。TF-IDF是一种用于资讯检索与资讯探勘的常用加权技术，是一种统计方法，用于评估一个词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要程度与它在文件中出现的次数成正比，但同时与它在语料库中出现的频率成反比。">
+<meta property="og:description" content="TF-IDF（Term Frequency-Inverse Document Frequency）即“词频-反文档频率”，主要由TF和IDF两部分组成。TF-IDF是一种用于资讯检索与资讯探勘的常用加权技术，是一种统计方法，用于评估一个词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要程度与它在文件中出现的次数成正比，但同时与它在语料库中出现的频率成反比。 TF——词频：一个词在文">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-1.png#pic_center">
 <meta property="og:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-2.png#pic_center">
 <meta property="og:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-3.png#pic_center">
 <meta property="og:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-4.png#pic_center">
 <meta property="og:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-5.png#pic_center">
-<meta property="og:updated_time" content="2019-03-25T14:37:14.713Z">
+<meta property="og:updated_time" content="2019-04-27T11:53:19.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文本挖掘预处理之TF-IDF">
-<meta name="twitter:description" content="TF-IDF（Term Frequency-Inverse Document Frequency）即“词频-反文档频率”，主要由TF和IDF两部分组成。TF-IDF是一种用于资讯检索与资讯探勘的常用加权技术，是一种统计方法，用于评估一个词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要程度与它在文件中出现的次数成正比，但同时与它在语料库中出现的频率成反比。">
+<meta name="twitter:description" content="TF-IDF（Term Frequency-Inverse Document Frequency）即“词频-反文档频率”，主要由TF和IDF两部分组成。TF-IDF是一种用于资讯检索与资讯探勘的常用加权技术，是一种统计方法，用于评估一个词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要程度与它在文件中出现的次数成正比，但同时与它在语料库中出现的频率成反比。 TF——词频：一个词在文">
 <meta name="twitter:image" content="http://yoursite.com/images/articles/2019/20190325TF-IDF-1.png#pic_center">
   <!-- Canonical links -->
   <link rel="canonical" href="http://yoursite.com/2019/03/25/TF-IDF-1/index.html">
@@ -408,7 +408,7 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>TF-IDF（Term Frequency-Inverse Document Frequency）即“词频-反文档频率”，主要由TF和IDF两部分组成。TF-IDF是一种用于资讯检索与资讯探勘的常用加权技术，是一种统计方法，用于评估一个词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要程度与它在文件中出现的次数成正比，但同时与它在语料库中出现的频率成反比。<br><a id="more"></a></p>
+        <p>TF-IDF（Term Frequency-Inverse Document Frequency）即“词频-反文档频率”，主要由TF和IDF两部分组成。TF-IDF是一种用于资讯检索与资讯探勘的常用加权技术，是一种统计方法，用于评估一个词对于一个文件集或一个语料库中的其中一份文件的重要程度。字词的重要程度与它在文件中出现的次数成正比，但同时与它在语料库中出现的频率成反比。</p>
 <p><strong>TF——词频：</strong>一个词在文章中出现的次数。</p>
 <p>在计算词频时，需要注意停用词的过滤。什么是停用词：在文章中出现次数最多的“的”、“是”、“在”等最常用词，但对结果毫无帮助，必须过滤的词。</p>
 <p>TF计算有两种方式，具体公式如下：</p>
