@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-27T11:56:12.005Z</updated>
+  <updated>2019-04-29T14:54:29.079Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue-CLI3 环境变量和模式</title>
+    <link href="http://yoursite.com/2019/04/29/vue-cli3-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%92%8C%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2019/04/29/vue-cli3-环境变量和模式/</id>
+    <published>2019-04-29T14:46:30.000Z</published>
+    <updated>2019-04-29T14:54:29.079Z</updated>
+    
+    <content type="html"><![CDATA[<p>前段时间工作中用Vue-CLI3构建的Vue工程一些静态资源，比如静态H5页面、图片、图标等等，我们一般放在固定的一些服务器上，链接前缀一般相对固定，但我们打包发布一般要区分测试环境和生产环境，此时的静态资源路径也需要区分测试和生产，如果每次打包都要根据部署的环境去修改路径十分麻烦，这时候vue-cli的模式和环境变量则能够很好地解决这个麻烦。</p><h2 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h2><p><strong>模式</strong>是Vue CLI项目中一个重要的概念。默认情况下，一个Vue CLI项目有三个模式：</p><ul><li><p>development 模式用于vue-cli-service serve</p></li><li><p>production 模式用于vue-cli-service build和vue-cli-service test:e2e</p></li><li><p>test 模式用于vue-cli-service test:unit</p></li></ul><p>模式不同于NODE_ENV，一个模式可以包含多个环境变量。每个模式都会将NODE_ENV的值设置为模式的名称，比如：development模式下NODE_ENV的值会被设置为development</p><p>当然，我们也可以通过为.env文件增加后缀来设置某个模式下特有的环境变量。</p><h4 id="示例：test模式"><a href="#示例：test模式" class="headerlink" title="示例：test模式"></a>示例：test模式</h4><p>我们在项目根目录下创建一个名为.env.test和.env的文件</p><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">//</span> <span class="string">.env</span>文件：</span><br><span class="line">VUE_APP_TITLE=VUE-CLI3-DEMO</span><br></pre></td></tr></table></figure><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// .env.test文件</span><br><span class="line">NODE_ENV=production</span><br><span class="line">VUE_APP_TITLE=VUE-CLI3-DEMO(test)</span><br></pre></td></tr></table></figure><ul><li><p>vue-cli-service build 会加载可能存在的 .env、.env.production 和 .env.production.local 文件然后构建出生产环境应用；</p></li><li><p>vue-cli-service build –mode test 会在 staging 模式下加载可能存在的 .env、.env.test 和 .env.test.local 文件然后构建出生产环境应用。</p></li></ul><p>这两种情况下，根据 NODE_ENV，构建出的应用都是生产环境应用，但是在 test 版本中，process.env.VUE_APP_TITLE 被覆写成了另一个值。</p><p>我们在vue.config.js文件中添加console.log(process.env.VUE_APP_TITLE)</p><p>在package.json文件中添加”build-test”: “vue-cli-service build –mode test”</p><p>执行npm run build和npm run build-test</p><p>通过查看控制台打印出的分别是VUE-CLI3-DEMO和VUE-CLI3-DEMO(test)，由此可见不同模式下的环境变量不同。</p><hr><h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><p>只有以<strong>VUE_APP_</strong>开头的变量才会被webpack.DefinePlugin静态嵌入到客户端侧的包中，我们可以在代码中以下面的方式访问：process.env.VUE_APP_TITLE</p><p>除了VUE_APP_*变量外，还有两个始终可用的特殊变量：</p><ul><li><strong>NODE_ENV</strong>  值为development、productin、test中的一个。</li><li><strong>BASE_URL</strong>  与vue.config.js中的publicPath相符，即应用部署的基础路径</li></ul><hr><p>回到我们最开始的关于静态资源在不同环境下的路径问题，我们可以分别创建.env.test和.env.production两个文件，在文件中添加变量VUE_APP_STATIC_BASE_URL，根据不同环境赋予不同的值，在代码中用到静态资源的时候通过process.env.VUE_APP_STATIC_BASE_URL + 静态资源后续具体路径，再package.json中添加相应的模式打包命令，这样就可以比较好解决我们最开始提出的问题了。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;前段时间工作中用Vue-CLI3构建的Vue工程一些静态资源，比如静态H5页面、图片、图标等等，我们一般放在固定的一些服务器上，链接前缀一般相对固定，但我们打包发布一般要区分测试环境和生产环境，此时的静态资源路径也需要区分测试和生产，如果每次打包都要根据部署的环境去修改路径
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Vue" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/Vue/"/>
+    
+    
+      <category term="Vue-CLI3" scheme="http://yoursite.com/tags/Vue-CLI3/"/>
+    
+      <category term="模式" scheme="http://yoursite.com/tags/%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="环境变量" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>中文分词Python库介绍</title>
@@ -90,9 +121,9 @@
       <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="中文分词" scheme="http://yoursite.com/tags/%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D/"/>
-    
       <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="中文分词" scheme="http://yoursite.com/tags/%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D/"/>
     
   </entry>
   
@@ -143,9 +174,9 @@
       <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="KNN" scheme="http://yoursite.com/tags/KNN/"/>
+    
+      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="分类算法" scheme="http://yoursite.com/tags/%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95/"/>
     
