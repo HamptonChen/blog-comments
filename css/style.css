@@ -6162,6 +6162,8 @@ body.no-sidebar .sidebar {
 
 .footer .copyright {
   font-size: 12px;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer .copyright a {
