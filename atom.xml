@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-29T14:54:29.079Z</updated>
+  <updated>2019-05-07T16:03:18.488Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CB-基于内容的推荐算法</title>
+    <link href="http://yoursite.com/2019/05/07/CB-%E5%9F%BA%E4%BA%8E%E5%86%85%E5%AE%B9%E7%9A%84%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/05/07/CB-基于内容的推荐算法/</id>
+    <published>2019-05-07T15:57:25.000Z</published>
+    <updated>2019-05-07T16:03:18.488Z</updated>
+    
+    <content type="html"><![CDATA[<p>在推荐系统领域，一般主要有两种推荐任务：评分预测和Top-N推荐。下面我们简单介绍一下这两种推荐任务：</p><h3 id="评分预测："><a href="#评分预测：" class="headerlink" title="评分预测："></a>评分预测：</h3><p>我们以音乐推荐系统为例，首先用户A和用户B都对某几首歌进行喜欢程度打分，假设两个用户对周杰伦的《稻香》和陈奕迅的《好久不见》有相同的喜欢程度，且打分都不低，那么我们是否可以预测这两个用户有相同的爱好，那么我们可以将用户A喜欢的《青花瓷》这首歌推荐给用户B。</p><h3 id="Top-N推荐"><a href="#Top-N推荐" class="headerlink" title="Top-N推荐"></a>Top-N推荐</h3><p>假设用户A喜欢的音乐列表里有《十年》、《好久不见》、《稻香》，用户B喜欢的音乐列表里有《同桌的你》、《三国杀》、《逆战》，假设用户C刚开始使用该系统，并将《稻香》添加到喜欢的音乐中，那么我们是不是可以先推荐与用户C喜好相近的用户A喜欢的音乐给用户C，再推荐用户B喜欢的音乐。先推荐关联性高的，将关联性低的放在后面，这就是Top-N推荐。</p><h1 id="基于内容的推荐算法-CB"><a href="#基于内容的推荐算法-CB" class="headerlink" title="基于内容的推荐算法(CB)"></a>基于内容的推荐算法(CB)</h1><p>今天要介绍的CB(Content-Based Recommendations)算法是众多推荐推荐算法中的一种，也是比较早被使用的一种推荐算法。</p><h2 id="1、引入Item属性的基于内容的推荐"><a href="#1、引入Item属性的基于内容的推荐" class="headerlink" title="1、引入Item属性的基于内容的推荐"></a>1、引入Item属性的基于内容的推荐</h2><p>用户喜欢歌曲A(item)，现在有一首新歌曲B，如何确定是否要推荐给用户？</p><ul><li><p>首先我们对所有的音乐进行内容分析和item内容属性索引，即进行特征建立和建模，音乐的特征有：作者、年代、音乐风格等等。</p></li><li><p>然后我们去计算歌曲A和歌曲B两者的相关性，如何相关性高，则将歌曲B推荐给用户。</p></li></ul><div style="display: flex; justify-content: center;"><br><img src="/images/articles/2019/CB-item.png" alt="Alt"><br></div><p>这类推荐算法有以下优缺点：</p><p><strong>优点：</strong></p><ul><li>提升推荐结果的相关性</li><li>结果可解释</li><li>推荐结果容易被用户感知</li></ul><p><strong>缺点：</strong></p><ul><li>无个性化</li><li>依赖于对item的深度分析</li></ul><h2 id="2、引入User属性的基于内容的推荐"><a href="#2、引入User属性的基于内容的推荐" class="headerlink" title="2、引入User属性的基于内容的推荐"></a>2、引入User属性的基于内容的推荐</h2><p>引入User属性的基于内容推荐算法加入了用户行为分析和建立用户兴趣模型。假设用户在过去的一段时间里听了爵士乐、DJ、周杰伦的歌，我们可以根据这几个历史标签进行数据建模，建立历史标签的正排倒排的内容分析。与上面不同的是这方面是基于用户的历史行为作分析，我们将其存到数据库，以后为用户推荐音乐时，先查库，然后进行相关的推荐。</p><div style="display: flex; justify-content: center;"><br><img src="/images/articles/2019/CB-user.png" alt="Alt"><br></div><p>这类推荐算法有以下优缺点：</p><p><strong>优点：</strong></p><ul><li>用户模型刻画了用户兴趣需求</li><li>推荐形式多样，具有个性化</li><li>结果可解释</li></ul><p><strong>缺点：</strong></p><ul><li>推荐精度低</li><li>马太效应</li><li>用户行为稀疏导致覆盖率低</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在推荐系统领域，一般主要有两种推荐任务：评分预测和Top-N推荐。下面我们简单介绍一下这两种推荐任务：&lt;/p&gt;
+&lt;h3 id=&quot;评分预测：&quot;&gt;&lt;a href=&quot;#评分预测：&quot; class=&quot;headerlink&quot; title=&quot;评分预测：&quot;&gt;&lt;/a&gt;评分预测：&lt;/h3&gt;&lt;p
+      
+    
+    </summary>
+    
+      <category term="大数据" scheme="http://yoursite.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+    
+      <category term="推荐算法" scheme="http://yoursite.com/tags/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="大数据" scheme="http://yoursite.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue-CLI3 环境变量和模式</title>
@@ -94,9 +122,9 @@
       <category term="大数据" scheme="http://yoursite.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
     
-      <category term="推荐系统" scheme="http://yoursite.com/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"/>
-    
       <category term="大数据" scheme="http://yoursite.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="推荐系统" scheme="http://yoursite.com/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
