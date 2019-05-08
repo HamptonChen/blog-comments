@@ -5,9 +5,9 @@
   <subtitle>Hampton Chen&#39;s Blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://hamptonchen.github.io/"/>
   <updated>2019-05-07T16:03:18.488Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://hamptonchen.github.io/</id>
   
   <author>
     <name>Hampton Chen</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>CB-基于内容的推荐算法</title>
-    <link href="http://yoursite.com/2019/05/07/CB-%E5%9F%BA%E4%BA%8E%E5%86%85%E5%AE%B9%E7%9A%84%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/"/>
-    <id>http://yoursite.com/2019/05/07/CB-基于内容的推荐算法/</id>
+    <link href="https://hamptonchen.github.io/2019/05/07/CB-%E5%9F%BA%E4%BA%8E%E5%86%85%E5%AE%B9%E7%9A%84%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/"/>
+    <id>https://hamptonchen.github.io/2019/05/07/CB-基于内容的推荐算法/</id>
     <published>2019-05-07T15:57:25.000Z</published>
     <updated>2019-05-07T16:03:18.488Z</updated>
     
@@ -35,19 +35,19 @@
     
     </summary>
     
-      <category term="大数据" scheme="http://yoursite.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+      <category term="大数据" scheme="https://hamptonchen.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
     
-      <category term="推荐算法" scheme="http://yoursite.com/tags/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/"/>
+      <category term="推荐算法" scheme="https://hamptonchen.github.io/tags/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/"/>
     
-      <category term="大数据" scheme="http://yoursite.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+      <category term="大数据" scheme="https://hamptonchen.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
   </entry>
   
   <entry>
     <title>Vue-CLI3 环境变量和模式</title>
-    <link href="http://yoursite.com/2019/04/29/vue-cli3-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%92%8C%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2019/04/29/vue-cli3-环境变量和模式/</id>
+    <link href="https://hamptonchen.github.io/2019/04/29/vue-cli3-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%92%8C%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://hamptonchen.github.io/2019/04/29/vue-cli3-环境变量和模式/</id>
     <published>2019-04-29T14:46:30.000Z</published>
     <updated>2019-04-29T14:54:29.079Z</updated>
     
@@ -62,23 +62,23 @@
     
     </summary>
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://hamptonchen.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Vue" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/Vue/"/>
+      <category term="Vue" scheme="https://hamptonchen.github.io/categories/%E5%89%8D%E7%AB%AF/Vue/"/>
     
     
-      <category term="Vue-CLI3" scheme="http://yoursite.com/tags/Vue-CLI3/"/>
+      <category term="Vue-CLI3" scheme="https://hamptonchen.github.io/tags/Vue-CLI3/"/>
     
-      <category term="模式" scheme="http://yoursite.com/tags/%E6%A8%A1%E5%BC%8F/"/>
+      <category term="模式" scheme="https://hamptonchen.github.io/tags/%E6%A8%A1%E5%BC%8F/"/>
     
-      <category term="环境变量" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+      <category term="环境变量" scheme="https://hamptonchen.github.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
     
   </entry>
   
   <entry>
     <title>中文分词Python库介绍</title>
-    <link href="http://yoursite.com/2019/04/21/%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8DPython%E5%BA%93%E4%BB%8B%E7%BB%8D/"/>
-    <id>http://yoursite.com/2019/04/21/中文分词Python库介绍/</id>
+    <link href="https://hamptonchen.github.io/2019/04/21/%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8DPython%E5%BA%93%E4%BB%8B%E7%BB%8D/"/>
+    <id>https://hamptonchen.github.io/2019/04/21/中文分词Python库介绍/</id>
     <published>2019-04-21T09:05:40.000Z</published>
     <updated>2019-04-27T11:56:12.005Z</updated>
     
@@ -94,17 +94,17 @@
     
     </summary>
     
-      <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://hamptonchen.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="中文分词" scheme="http://yoursite.com/tags/%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D/"/>
+      <category term="中文分词" scheme="https://hamptonchen.github.io/tags/%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D/"/>
     
   </entry>
   
   <entry>
     <title>推荐系统介绍</title>
-    <link href="http://yoursite.com/2019/04/16/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/"/>
-    <id>http://yoursite.com/2019/04/16/推荐系统介绍/</id>
+    <link href="https://hamptonchen.github.io/2019/04/16/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/"/>
+    <id>https://hamptonchen.github.io/2019/04/16/推荐系统介绍/</id>
     <published>2019-04-15T16:29:20.000Z</published>
     <updated>2019-04-27T11:53:43.579Z</updated>
     
@@ -119,19 +119,19 @@
     
     </summary>
     
-      <category term="大数据" scheme="http://yoursite.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+      <category term="大数据" scheme="https://hamptonchen.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
     
-      <category term="大数据" scheme="http://yoursite.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+      <category term="大数据" scheme="https://hamptonchen.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
-      <category term="推荐系统" scheme="http://yoursite.com/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"/>
+      <category term="推荐系统" scheme="https://hamptonchen.github.io/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
   <entry>
     <title>中文分词</title>
-    <link href="http://yoursite.com/2019/04/09/%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D/"/>
-    <id>http://yoursite.com/2019/04/09/中文分词/</id>
+    <link href="https://hamptonchen.github.io/2019/04/09/%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D/"/>
+    <id>https://hamptonchen.github.io/2019/04/09/中文分词/</id>
     <published>2019-04-09T02:52:01.000Z</published>
     <updated>2019-04-27T11:53:28.275Z</updated>
     
@@ -146,19 +146,19 @@
     
     </summary>
     
-      <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://hamptonchen.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://hamptonchen.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="中文分词" scheme="http://yoursite.com/tags/%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D/"/>
+      <category term="中文分词" scheme="https://hamptonchen.github.io/tags/%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D/"/>
     
   </entry>
   
   <entry>
     <title>文本挖掘预处理之TF-IDF</title>
-    <link href="http://yoursite.com/2019/03/25/TF-IDF-1/"/>
-    <id>http://yoursite.com/2019/03/25/TF-IDF-1/</id>
+    <link href="https://hamptonchen.github.io/2019/03/25/TF-IDF-1/"/>
+    <id>https://hamptonchen.github.io/2019/03/25/TF-IDF-1/</id>
     <published>2019-03-25T14:10:10.000Z</published>
     <updated>2019-04-27T11:53:19.381Z</updated>
     
@@ -173,17 +173,17 @@
     
     </summary>
     
-      <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://hamptonchen.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="TF-IDF" scheme="http://yoursite.com/tags/TF-IDF/"/>
+      <category term="TF-IDF" scheme="https://hamptonchen.github.io/tags/TF-IDF/"/>
     
   </entry>
   
   <entry>
     <title>K-近邻(KNN)算法</title>
-    <link href="http://yoursite.com/2019/03/21/knn/"/>
-    <id>http://yoursite.com/2019/03/21/knn/</id>
+    <link href="https://hamptonchen.github.io/2019/03/21/knn/"/>
+    <id>https://hamptonchen.github.io/2019/03/21/knn/</id>
     <published>2019-03-21T09:04:17.000Z</published>
     <updated>2019-04-27T11:53:09.722Z</updated>
     
@@ -199,14 +199,14 @@
     
     </summary>
     
-      <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://hamptonchen.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="KNN" scheme="http://yoursite.com/tags/KNN/"/>
+      <category term="KNN" scheme="https://hamptonchen.github.io/tags/KNN/"/>
     
-      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://hamptonchen.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="分类算法" scheme="http://yoursite.com/tags/%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95/"/>
+      <category term="分类算法" scheme="https://hamptonchen.github.io/tags/%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
