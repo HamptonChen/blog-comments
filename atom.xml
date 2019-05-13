@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hamptonchen.github.io/"/>
-  <updated>2019-05-07T16:03:18.488Z</updated>
+  <updated>2019-05-13T15:05:25.652Z</updated>
   <id>https://hamptonchen.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CF-基于协同过滤的推荐算法</title>
+    <link href="https://hamptonchen.github.io/2019/05/13/CF-%E5%9F%BA%E4%BA%8E%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E7%9A%84%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/"/>
+    <id>https://hamptonchen.github.io/2019/05/13/CF-基于协同过滤的推荐算法/</id>
+    <published>2019-05-13T15:05:11.000Z</published>
+    <updated>2019-05-13T15:05:25.652Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>上一篇文章我们介绍了CB推荐算法，本篇文章我们将介绍另外一种推荐算法——基于协同过滤的推荐算法(Collaborative Filtering Recommendations)，下文我们统一简称为CF算法。</p><p>协同过滤推荐算法作为推荐算法中最经典的类型，包括在线的协同和离线的过滤两部分。在线协同是指通过在线数据找到用户可能喜欢的物品，离线过滤则是过滤掉一些不值得推荐的数据，比如推荐评分低的，或者推荐评分高但用户已经购买过的数据。</p><p>CF算法的数据源是基于用户历史行为和物品的矩阵数据，即UI（User-Item）矩阵数据。CF算法一般可以分为基于用户（User-Based）的协同过滤和基于物品（item-based）的协同过滤。</p><h1 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h1><h2 id="1、-User-Based-CF"><a href="#1、-User-Based-CF" class="headerlink" title="1、 User-Based CF"></a>1、 User-Based CF</h2><p>假设：</p><ul><li>用户喜欢跟他过去喜欢的物品相似的物品</li><li>历史上相似的物品在未来也相似</li></ul><p>方法：</p><ul><li>给定用户u，找到他过去喜欢的物品的集合R(u)</li><li>把和R(u)相似的物品推荐给u</li></ul><h2 id="2、-Item-Based-CF"><a href="#2、-Item-Based-CF" class="headerlink" title="2、 Item-Based CF"></a>2、 Item-Based CF</h2><p>假设：</p><ul><li>用户喜欢跟他过去喜欢的物品相似的物品</li><li>历史上相似的物品在未来也相似</li></ul><p>方法：</p><ul><li>给定用户u，找到他过去喜欢的物品的集合R(u)</li><li>把和R(u)相似的物品推荐给u</li></ul><div style="display: flex; justify-content: center;"><br><img src="/images/articles/2019/CF_1.png" alt="Alt"><br></div><h1 id="CF算法优缺点"><a href="#CF算法优缺点" class="headerlink" title="CF算法优缺点"></a>CF算法优缺点</h1><p><strong>优点：</strong></p><ul><li>充分利用群体智慧</li><li>推荐精度高于CB</li><li>利于挖掘隐含的相关性</li></ul><p><strong>缺点：</strong></p><ul><li>推荐结果解释性较差</li><li>对时效性强的Item不适用</li><li>冷启动问题</li></ul><h1 id="算法处理过程"><a href="#算法处理过程" class="headerlink" title="算法处理过程"></a>算法处理过程</h1><h3 id="1、数据准备"><a href="#1、数据准备" class="headerlink" title="1、数据准备"></a>1、数据准备</h3><p>用户user_id,物品item_id，打分score（score可以是用户对某件物品的评分，或是根据用户行为计算出的偏好度得分，比如曝光、点击、收藏的加权得分，具体权重可以参考漏斗模型），数据如下：</p><table><thead><tr><th>user_id</th><th>item_id</th><th>score</th></tr></thead><tbody><tr><td>id1</td><td>item1</td><td>3</td></tr><tr><td>id1</td><td>item2</td><td>2</td></tr><tr><td>id2</td><td>item1</td><td>4</td></tr><tr><td>id2</td><td>item2</td><td>3</td></tr></tbody></table><h3 id="2、计算相似性矩阵"><a href="#2、计算相似性矩阵" class="headerlink" title="2、计算相似性矩阵"></a>2、计算相似性矩阵</h3><p>CF算法的关键在于计算获得user或item的相似度矩阵，即UU矩阵和II矩阵。</p><p><strong>User-Based：</strong></p><div style="display: flex; justify-content: center;"><br><img src="/images/articles/2019/CF_2.png" alt="Alt"><br></div><p>用户之间的相似度计算，是基于对相同的物品打过分，可以将各个分值联合起来作为一个向量，然后计算余弦相似度：</p><div style="display: flex; justify-content: center;"><br><img src="/images/articles/2019/CF_3.jpg" alt="Alt"><br></div><p><strong>Item-Based：</strong></p><div style="display: flex; justify-content: center;"><br><img src="/images/articles/2019/CF_5.png" alt="Alt"><br></div><p>计算各个Item之间的相似度矩阵，即对两个Item都打过分的id的打分情况作为向量，同理得到item的相似度矩阵。</p><h3 id="3、推荐"><a href="#3、推荐" class="headerlink" title="3、推荐"></a>3、推荐</h3><p>根据相似度矩阵，选择与目标用户相似度最高的几位用户，在第一张表中选取各自打分较高的物品，形成一个推荐候选集合，准备推荐给目标用户。</p><h1 id="User-Based-CF和Item-Based-CF区别"><a href="#User-Based-CF和Item-Based-CF区别" class="headerlink" title="User-Based CF和Item-Based CF区别"></a>User-Based CF和Item-Based CF区别</h1><p>通过两种方法，我们发现两种的分数不一样，那么该用哪个呢，哪个真实，其实这个不重要，生活中我们一般是基于用户给用户推荐Top问题，而不是打分情况，即只要排好序就可以，工作这个分数其实还是有用的，一般我们有这么个准则，哪个维度小用哪个，电商网站物品的矩阵远大于用户矩阵，规模太大有时候造成一些慢，相反一样 </p><p>那么我们来看一下这两个对比不同</p><table><thead><tr><th></th><th>User-Based</th><th>Item-Based</th></tr></thead><tbody><tr><td>性能</td><td>适用用户较少场合，如果用户多，计算用户相似矩阵代价太大</td><td>适用于物品数明显小于用户数的场合，如果物品很多，计算物品相似度矩阵代价很大</td></tr><tr><td>领域</td><td>时效性强，用户个性化兴趣不太明显的领域</td><td>长尾物品丰富，用户个性化需求强烈的领域</td></tr><tr><td>实时性</td><td>用户有新行为，不一定造成推荐结果立即变化</td><td>用户有新行为，一定会导致推荐结果的实时变化</td></tr><tr><td>冷启动</td><td>在新用户对很少的物品产生行为后，不能立即对他进行个性化推荐，因为用户相似度表是每隔一段时间离线计算的  新物品上线后一段时间，一旦有用户对物品产生行为，就可以将新物品推荐给对它产生行为的用户兴趣相似的其他用户</td><td>新用户只要对一个物品产生行为，就可以给他推荐和该物品相关的其他物品   但没有办法在不离线更新物品相似度表的情况下将新物品推荐给用户</td></tr><tr><td>推荐理由</td><td>很难提供令用户信服的推荐解释</td><td>利用用户的历史行为给用户做推荐解释，可以令用户比较信服</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h1&gt;&lt;p&gt;上一篇文章我们介绍了CB推荐算法，本篇文章我们将介绍另外一种推荐算法——基于协同过滤的推荐算法(Collaborative Filterin
+      
+    
+    </summary>
+    
+      <category term="大数据" scheme="https://hamptonchen.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+    
+      <category term="推荐算法" scheme="https://hamptonchen.github.io/tags/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="大数据" scheme="https://hamptonchen.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>CB-基于内容的推荐算法</title>
