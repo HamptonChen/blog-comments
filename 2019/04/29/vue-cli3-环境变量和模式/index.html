@@ -290,12 +290,12 @@
     var pathId = pathArr[pathArr.length-1];
     var gitalk = new Gitalk({
         // Gitalk配置
-        clientID: "426fa60dacc3e77fd9a6",
-        clientSecret: "846dcb076ce4935b7c7ed51b0380f58160c281c2",
-        repo: "https://github.com/HamptonChen/hamptonchen.github.io.git",
+        clientID: "fb80658382dee5240195",
+        clientSecret: "66663a08264192222ba993f20dd7c0a27c1e6fa5",
+        repo: "hamptonchen.github.io",
         owner: "HamptonChen",
         admin: "[HamptonChen]",
-        id: "" || pathId || location.pathname,
+        id: "md5(location.pathname)" || pathId || location.pathname,
         distractionFreeMode: true
     });
     gitalk.render('gitalk-container');
