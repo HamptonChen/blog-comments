@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hamptonchen.github.io/about/index.html</loc>
+    
+    <lastmod>2019-06-04T15:12:16.068Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hamptonchen.github.io/2019/05/13/CF-%E5%9F%BA%E4%BA%8E%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E7%9A%84%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/</loc>
     
     <lastmod>2019-05-13T15:05:25.652Z</lastmod>
@@ -54,13 +61,6 @@
     <loc>https://hamptonchen.github.io/2019/03/21/knn/</loc>
     
     <lastmod>2019-04-27T11:53:09.722Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hamptonchen.github.io/about/index.html</loc>
-    
-    <lastmod>2019-04-09T14:08:03.038Z</lastmod>
     
   </url>
   
