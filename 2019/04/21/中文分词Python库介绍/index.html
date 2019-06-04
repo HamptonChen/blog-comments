@@ -324,9 +324,9 @@ jieba结巴...">
         repo: "hamptonchen.github.io",
         owner: "HamptonChen",
         admin: "[HamptonChen]",
-        // id: "md5(location.pathname)" || pathId || location.pathname,
-        id: md5(location.pathname),
-        distractionFreeMode: true
+        id: md5(location.pathname) || pathId || location.pathname,
+        distractionFreeMode: true,
+        createIssueManually: true
     });
     gitalk.render('gitalk-container');
 </script>
@@ -395,6 +395,19 @@ jieba结巴...">
                 <span>
                     Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
                 </span>
+                
+                    <span> | </span>
+                    <span>
+                        闽ICP备19010134号-1
+                    </span>
+                
+                
+                    <span> | </span>
+                    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35020302033449">
+                        <img src="/img/beian_icon.png">
+                        <span>闽公网安备 35020302033449号</span>
+                    </a>
+                         
             </div>
         </div>
     </div>
