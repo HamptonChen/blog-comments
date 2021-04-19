@@ -2,7 +2,7 @@
 
 ## 我的博客地址：
 
-http://www.chenhanpeng.com
+https://www.chenhanpeng.com
 
 
 ## 微信公众号：【前端极客技术】
